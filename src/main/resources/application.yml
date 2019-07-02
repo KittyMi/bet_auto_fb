@@ -1,0 +1,57 @@
+server:
+  port: 9091
+
+spring:
+  profiles:
+    active: dev
+  devtools:
+    restart:
+      enabled: false
+  application:
+    name: auto_ball
+  datasource:
+    name: auto_ball
+    url: jdbc:mysql://127.0.0.1:3306/football?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowMultiQueries=true
+    username: root
+    password: root
+    #使用druid数据源
+    driverClassName: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 5
+    initialSize: 1
+    maximumPoolSize: 5
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 5
+
+
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*.xml
+  mapper-locations: classpath:/mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.auto.ball.entity
+  configuration:
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+
+#开启mybatis的sql日志
+logging:
+  path: /log
+  level:
+    com.auto.ball.mapper: debug
+
+
+bet:
+  price: 1
+  url: https://www.999365365.com/#/IP/

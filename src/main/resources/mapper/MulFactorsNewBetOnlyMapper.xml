@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.auto.ball.mapper.MulFactorsNewBetOnlyMapper">
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, is_manzu, prod, model_type, match_id, league, host_guest, fenzhong, is_win, host_name, guest_name, score_host, score_guest, shoot_positive_host, shoot_positive_guest, shoot_aside_host, shoot_aside_guest, score_cha, corner_host, corner_guest, corner_cha, yellow_host, yellow_guest, yellow_cha, red_host, red_guest, red_cha, shoot_positive_cha, shoot_aside_cha, shoot_cha, attack_host, attack_guest, attack_cha, dangerous_attack_host, dangerous_attack_guest, dangerous_attack_cha, ball_right_host, ball_right_guest, ball_right_cha, odds_host, let_ball, odds_guest, high_host, size_ball, low_guest, initial_let_ball, initial_size_ball, real_time, dangerous_attack_host_10, dangerous_attack_guest_10, shoot_positive_host_10, shoot_positive_guest_10, shoot_aside_host_10, shoot_aside_guest_10, corner_host_10, corner_guest_10, score_host_10, score_guest_10, gmt_update, gmt_create
+    </sql>
+
+</mapper>
